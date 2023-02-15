@@ -1,0 +1,54 @@
+body {
+    background-color: #CAF0F8;
+}
+
+#navbar {
+    background-color: #03045E;
+    color: white;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+}
+
+#navbar h3 {
+    flex: 1;
+    margin-left: 10px;
+    font-family: 'Kaushan Script', cursive;
+    font-size: 2em;
+}
+
+#navbar a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: white;
+}
+
+#navbar a:hover {
+    color: rgb(217, 217, 217);
+}
+
+#miguel {
+    border-radius: 50%;
+    border: 2px solid #00B4D8;
+    max-width: 350px;
+    width: 50%;
+    margin: 30px 0;
+}
+
+footer {
+    background-color: #03045E;
+    color: white;
+}
+
+main {
+    max-width: 1000px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: auto;
+}
+
+main p {
+    padding: 0 20px;
+}
