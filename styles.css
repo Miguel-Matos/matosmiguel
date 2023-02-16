@@ -1,3 +1,9 @@
+html, body {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
 body {
     background-color: #CAF0F8;
 }
@@ -18,14 +24,14 @@ body {
     font-size: 2em;
 }
 
-#navbar a {
+a {
     margin: 0 10px;
     text-decoration: none;
     color: white;
     height: 30px;
 }
 
-#navbar a:hover {
+a:hover {
     color: rgb(217, 217, 217);
 }
 
@@ -40,6 +46,13 @@ body {
 footer {
     background-color: #03045E;
     color: white;
+    flex: 0;
+    text-align: center;
+}
+
+footer p {
+    margin: auto;
+    padding: 20px 0;
 }
 
 main {
@@ -52,4 +65,40 @@ main {
 
 main p {
     padding: 0 20px;
+}
+
+
+#title {
+    text-align: center;
+}
+
+#projects {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+    max-width: 900px;
+
+}
+
+#projects div {
+    flex: 1;
+    background-color: #00B4D8;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#projects div img {
+    max-width: 250px;
+    object-fit: cover;
+}
+
+#projects div p {
+    color: white;
+    margin: auto;
+}
+
+#sec2 {
+    margin-bottom: 25px;
 }
