@@ -25,11 +25,11 @@ nav .navbar-nav a {
     color: white !important;
     }
 
-.navbar-brand {
+#name {
     font-family: 'Kaushan Script', cursive;
     color: white;
     font-size: 35px;
-    margin-bottom: 30px;
+    margin: 10px 0 5px 10px;
 }
 
 a {
