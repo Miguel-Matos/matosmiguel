@@ -78,13 +78,16 @@ main p {
 
 #title {
     text-align: center;
+    margin-bottom: 20px;
 }
 
 #projects {
     display: flex;
     flex-wrap: wrap;
-    gap: 50px;
+    gap: 25px;
     max-width: 900px;
+    justify-content: center;
+    align-items: center;
 
 }
 
@@ -94,7 +97,9 @@ main p {
     border-radius: 10px;
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
     align-items: center;
+    max-width: 250px;
 }
 
 #projects div img {
@@ -104,9 +109,18 @@ main p {
 
 #projects div p {
     color: white;
+    padding: 10px 0;
     margin: auto;
+    flex: 1;
 }
 
 #sec2 {
     margin-bottom: 25px;
+}
+
+#projects div a {
+    padding: 5px 0;
+    font-size: 25px;
+    flex: 2;
+    font-weight: bolder;
 }
