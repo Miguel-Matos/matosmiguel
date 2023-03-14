@@ -1,17 +1,17 @@
-let button = document.querySelector("#btn");
+let button = document.querySelector("#bun");
 let doc = document.querySelector("html");
 let on = false;
 
-button.innerHTML = "Off";
+document.getElementById("bun").src = "img/moon.svg";
 
 button.addEventListener("click", () => {
   if (on === false) {
     on = true;
     doc.classList.add("dark");
-    button.innerHTML = "On"
+    document.getElementById("bun").src = "img/sun.svg";
   } else {
     on = false;
     doc.classList.remove("dark");
-    button.innerHTML = "Off"
+    document.getElementById("bun").src = "img/moon.svg";
   }
 });
