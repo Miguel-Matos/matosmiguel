@@ -11,7 +11,7 @@ export default function Contact() {
   const sendEmail = (e:any) => {
     e.preventDefault();
 
-    emailjs.sendForm(process.env.VITE_VERCEL_SERVICE_ID as string, process.env.VITE_VERCEL_TEMPLATE_ID as string, form.current, process.env.VITE_VERCEL_KEY as string)
+    emailjs.sendForm(import.meta.env.VITE_VERCEL_SERVICE_ID as string, import.meta.env.VITE_VERCEL_TEMPLATE_ID as string, form.current, import.meta.env.VITE_VERCEL_KEY as string)
       .then((result) => {
           console.log(result.text);
       }, (error) => {
