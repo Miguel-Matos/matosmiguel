@@ -40,13 +40,13 @@ export default function Contact() {
 
           <form ref={form} onSubmit={sendEmail} className="flex flex-col w-full">
             <label className="text-center lg:text-left font-bold py-5 text-lg" htmlFor="user_name">Full Name<span className='text-red-500'>*</span></label>
-            <input className="border bg-slate-100 p-5" type="text" id="user_name" name='user_name' placeholder="John Smith" required />
+            <input className="border text-black bg-slate-100 p-5" type="text" id="user_name" name='user_name' placeholder="John Smith" required />
 
             <label className="text-center lg:text-left font-bold py-5 text-lg"  htmlFor="user_email">Email<span className='text-red-500'>*</span></label>
-            <input className="border bg-slate-100 p-5" type="email" id="user_email" name='user_email' placeholder="John@gmail.com" required />
+            <input className="border text-black bg-slate-100 p-5" type="email" id="user_email" name='user_email' placeholder="John@gmail.com" required />
 
             <label className="text-center lg:text-left font-bold py-5 text-lg" htmlFor="message">Message<span className='text-red-500'>*</span></label>
-            <textarea className="border bg-slate-100 p-5" id="message" name='message' placeholder="Description" />
+            <textarea className="border text-black bg-slate-100 p-5" id="message" name='message' placeholder="Description" />
 
             <button value='Send' className="bg-cyan-500 p-5 text-white font-bold text-lg mt-10 shadow-md hover:shadow-2xl active:bg-cyan-600 rounded-md"><FontAwesomeIcon icon={faEnvelopeOpenText} /> Send Message</button>
           </form>      
