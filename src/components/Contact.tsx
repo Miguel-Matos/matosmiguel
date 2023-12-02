@@ -27,7 +27,7 @@ export default function Contact() {
         animate={{ opacity: 1 }}
         transition={{ duration: 0.5 }}
       >
-        <div id="contact" className="flex flex-col items-center p-16 mx-auto lg:flex-row lg:gap-5 xl:gap-10 2xl:gap-14 2xl:mt-20 text-zinc-300">
+        <div id="contact" className="flex flex-col items-center px-5 py-16 lg:px-16 mx-auto xl:flex-row xl:gap-16 2xl:gap-14 2xl:mt-20 text-zinc-300">
           <div>
             <h3 className="text-4xl font-bold text-center lg:text-left mb-10">Contact Me</h3>
             <p className="text-center lg:text-left mb-5 text-lg">If you would like to reach out to me for a chat, please free to give me a call, or send me a message and I will make sure to get back to you.</p>

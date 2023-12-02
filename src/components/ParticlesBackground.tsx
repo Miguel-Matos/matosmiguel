@@ -18,6 +18,7 @@ const particlesLoaded = useCallback(async (container: Container | undefined) => 
 }, []);
 	return (
 		<Particles
+      className=" bg-stone-800"
 			id="tsparticles"
 			init={particlesInit}
 			loaded={particlesLoaded}
@@ -25,7 +26,7 @@ const particlesLoaded = useCallback(async (container: Container | undefined) => 
         autoPlay: true,
         background: {
           color: {
-            value: "2d2d2d"
+            value: "292524"
           },
           image: "",
           position: "",

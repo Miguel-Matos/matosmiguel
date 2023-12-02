@@ -59,7 +59,7 @@ export default function Projects() {
           animate={{ opacity: 1 }}
           transition={{ duration: 0.5 }}
         >
-          <div className='text-zinc-300 p-10' id='projects'>
+          <div className='text-zinc-300 lg:p-10' id='projects'>
             <Section title='Projects' desc='Feel free to check out some of these sites, and even dive into the code. Some sites do not have code available as they are company sites. Please reach out to me if you have any questions, or want the inside scoop about the development process.' />
             <Cards />
           </div>
