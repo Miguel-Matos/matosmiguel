@@ -81,7 +81,7 @@ export default function Footer() {
               Menu
             </motion.button>
             <div hidden={!isOpen} className="fixed top-0 left-0 text-zinc-300">
-              <div className="flex flex-col justify-center items-center gap-10 text-2xl bg-zinc-800 w-screen h-screen">
+              <div className="flex flex-col pt-5 items-center gap-10 text-2xl bg-zinc-800 w-screen h-screen">
                 <motion.button
                   whileTap={{ scale: 0.97 }}
                   onClick={() => setIsOpen(!isOpen)}
