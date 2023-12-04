@@ -12,7 +12,7 @@ export default function Intro() {
   //   }
   // })
   return (
-    <>
+    <div className='z-20'>
       <AnimatePresence mode="wait">
         <motion.div
           initial={{ opacity: 0 }}
@@ -32,6 +32,6 @@ export default function Intro() {
           </div>
         </motion.div>
       </AnimatePresence>
-    </>
+    </div>
   );
 }

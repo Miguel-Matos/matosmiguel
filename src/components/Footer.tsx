@@ -58,7 +58,7 @@ export default function Footer() {
   const mobileMenu = menuItems.map(item => <Link className="hover:text-white" onClick={() => setIsOpen(!isOpen)} target={item.target} key={item.title} to={item.link}>{item.title}</Link>)
 
   return(
-    <>
+    <div className=" z-20">
     <AnimatePresence mode="wait">
       <motion.div
       className="mt-auto"
@@ -101,7 +101,7 @@ export default function Footer() {
         </footer>
       </motion.div>
     </AnimatePresence>
-  </>
+  </div>
 
   )
 }

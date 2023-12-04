@@ -20,7 +20,7 @@ export default function Contact() {
   };
 
   return(
-    <>
+    <div className=' z-20'>
     <AnimatePresence mode="wait">
       <motion.div
         initial={{ opacity: 0 }}
@@ -53,7 +53,7 @@ export default function Contact() {
         </div>
       </motion.div>
     </AnimatePresence>
-  </>
+  </div>
     
   );
 }

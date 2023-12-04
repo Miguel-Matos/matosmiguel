@@ -26,7 +26,7 @@ export default function Skills() {
     />
   </a>)
   return(
-    <>
+    <div className="z-20">
     <AnimatePresence mode="wait">
         <motion.div
           initial={{ opacity: 0 }}
@@ -39,7 +39,7 @@ export default function Skills() {
           </div>
         </motion.div>
       </AnimatePresence>
-    </>
+    </div>
     
   )
 }

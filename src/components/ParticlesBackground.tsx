@@ -18,7 +18,7 @@ const particlesLoaded = useCallback(async (container: Container | undefined) => 
 }, []);
 	return (
 		<Particles
-      className=" bg-stone-800"
+      className=" z-10"
 			id="tsparticles"
 			init={particlesInit}
 			loaded={particlesLoaded}

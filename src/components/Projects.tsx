@@ -52,7 +52,7 @@ function Cards() {
 
 export default function Projects() {
   return(
-    <>
+    <div className='z-20'>
       <AnimatePresence mode="wait">
         <motion.div
           initial={{ opacity: 0 }}
@@ -65,6 +65,6 @@ export default function Projects() {
           </div>
         </motion.div>
       </AnimatePresence>
-    </>
+    </div>
   );
 }

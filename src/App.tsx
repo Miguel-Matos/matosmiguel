@@ -8,7 +8,7 @@ import Contact from "./components/Contact";
 
 function App() {
   return (
-    <main className="min-h-screen flex flex-col">
+    <main className="min-h-screen flex flex-col bg-stone-800">
       <ParticlesBackground />
           <Routes>
             <Route path="/" element={<Intro />} />
