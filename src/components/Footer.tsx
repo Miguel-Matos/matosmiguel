@@ -85,7 +85,7 @@ export default function Footer() {
                 <motion.button
                   whileTap={{ scale: 0.97 }}
                   onClick={() => setIsOpen(!isOpen)}
-                  className="absolute bottom-16 rounded-xl border w-4/5 py-5 bg-zinc-600 focus:bg-gray-500 active:bg-gray-500 text-zinc-300 shadow-lg">
+                  className="absolute bottom-28 rounded-xl border w-4/5 py-5 bg-zinc-600 focus:bg-gray-500 active:bg-gray-500 text-zinc-300 shadow-lg">
                   Close
                 </motion.button>
                 <motion.button
