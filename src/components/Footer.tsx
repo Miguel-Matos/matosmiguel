@@ -26,6 +26,7 @@ function useMenuAnimation(isOpen: boolean) {
 
 export default function Footer() {
   const [isOpen, setIsOpen] = useState(false);
+  const [overflow, setOverflow] = useState('auto');
   const scope = useMenuAnimation(isOpen);
   const menuItems: {title: string; link: string; target: string}[] = [
     {
@@ -54,8 +55,23 @@ export default function Footer() {
       target: '_self'
     }
   ]
-  const menu = menuItems.map(item => <Link className="hover:text-white" target={item.target} key={item.title} to={item.link}>{item.title}</Link>)
-  const mobileMenu = menuItems.map(item => <Link className="hover:text-white" onClick={() => setIsOpen(!isOpen)} target={item.target} key={item.title} to={item.link}>{item.title}</Link>)
+
+  function openAndLock() {
+    setIsOpen(!isOpen)
+
+    if (overflow === 'auto') {
+      setOverflow('hidden');
+    } else {
+      setOverflow('auto');
+    }
+  }
+
+  const menu = menuItems.map(item => <Link className="hover:text-white" target={item.target} key={item.title} to={item.link}>{item.title}</Link>);
+  const mobileMenu = menuItems.map(item => <Link className="hover:text-white" onClick={openAndLock} target={item.target} key={item.title} to={item.link}>{item.title}</Link>);
+  const body = document.body;
+  body.style.overflow = overflow;
+
+ 
 
   return(
     <div className=" z-20">
@@ -76,21 +92,21 @@ export default function Footer() {
           <div className="menu mb-5" ref={scope}>
             <motion.button
               whileTap={{ scale: 0.97 }}
-              onClick={() => setIsOpen(!isOpen)}
+              onClick={openAndLock}
               className="font-bold p-2 bg-white/20 rounded-lg lg:hidden">
               Menu
             </motion.button>
-            <div hidden={!isOpen} className="fixed top-0 left-0 text-zinc-300">
+            <div hidden={!isOpen} className="fixed top-0 left-0 text-zinc-300 ">
               <div className="flex flex-col pt-5 items-center gap-10 text-2xl bg-zinc-800 w-screen h-screen">
                 <motion.button
                   whileTap={{ scale: 0.97 }}
-                  onClick={() => setIsOpen(!isOpen)}
+                  onClick={openAndLock}
                   className="absolute bottom-28 rounded-xl border w-4/5 py-5 bg-zinc-600 focus:bg-gray-500 active:bg-gray-500 text-zinc-300 shadow-lg">
                   Close
                 </motion.button>
                 <motion.button
                   whileTap={{ scale: 0.97 }}
-                  onClick={() => setIsOpen(!isOpen)}
+                  onClick={openAndLock}
                   className="font-bold p-2 lg:hidden">
                   Menu
                 </motion.button>
