@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPhone, faEnvelope, faLocationDot, faEnvelopeOpenText } from '@fortawesome/free-solid-svg-icons';
-import { useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
 import { motion, AnimatePresence } from "framer-motion";
 
@@ -17,13 +17,17 @@ export default function Contact() {
       .then((result) => {
           console.log(result.text);
           setSent(!sent);
-          setTimeout(() => {
-            setSent(!sent);
-          }, 5000)
       }, (error) => {
           console.log(error.text);
       });
   };
+
+  useEffect(() => {
+    setTimeout(() => {
+      setSent(!sent);
+    }, 5000)
+
+  }, [sent]);
 
   return(
     <div className=' z-20'>
