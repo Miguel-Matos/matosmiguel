@@ -8,7 +8,7 @@ import { motion, AnimatePresence } from "framer-motion";
 export default function Contact() {
   const form:any = useRef();
 
-  const [sent, setSent] = useState(true);
+  const [sent, setSent] = useState(false);
 
   const sendEmail = (e:any) => {
     e.preventDefault();
@@ -17,6 +17,9 @@ export default function Contact() {
       .then((result) => {
           console.log(result.text);
           setSent(!sent);
+          setTimeout(() => {
+            setSent(!sent);
+          }, 5000)
       }, (error) => {
           console.log(error.text);
       });
@@ -43,15 +46,9 @@ export default function Contact() {
 
           <form ref={form} onSubmit={sendEmail} className="flex flex-col w-full">
 
-            <AnimatePresence mode="wait">
-              <motion.div
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ duration: 0.5 }}
-              >
-                <p hidden={sent} className=' bg-stone-700 p-5 text-center rounded-xl text-lg font-bold'>Your message was successfully sent!</p>
-              </motion.div>
-            </AnimatePresence>
+
+            <p hidden={sent} className=' bg-stone-700 p-5 text-center rounded-xl text-lg font-bold'>Your message was successfully sent!</p>
+
 
             <label className="text-center lg:text-left font-bold py-5 text-lg" htmlFor="user_name">Full Name<span className='text-red-500'>*</span></label>
             <input className="border text-black bg-slate-100 p-5" type="text" id="user_name" name='user_name' placeholder="John Smith" required />
