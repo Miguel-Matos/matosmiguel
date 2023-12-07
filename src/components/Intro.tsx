@@ -24,7 +24,7 @@ export default function Intro() {
             <p id='intro' className='text-center  lg:w-1/2 mx-auto pb-16'>Hello! My name is Miguel and I am a frontend developer based in Central Florida.
                 With a solid understanding of React, Next.js, Typescript, Tailwind, and more, I am always looking for new ways to push the boundaries of what is possible in the digital space.
             </p>
-            <img className='mb-16 rounded-full mx-auto border' src="/me.webp" width={250} height={250} alt="Miguel" id="miguel" />
+            <img className='mb-16 rounded-full mx-auto border' src="/me_sm.webp" width={250} height={250} alt="Miguel" id="miguel" />
             <div className="flex gap-10 justify-center items-center mb-5">
               <a className="flex gap-1 items-center" href='https://www.linkedin.com/in/miguelmatosjp/' target="_blank"><FontAwesomeIcon icon={faLinkedin} size='2xl' /></a>
               <a className="flex gap-1 items-center" href='https://github.com/Miguel-Matos' target="_blank"><FontAwesomeIcon icon={faSquareGithub} size='2xl' /></a>

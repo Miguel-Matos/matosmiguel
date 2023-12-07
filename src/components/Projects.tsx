@@ -13,7 +13,7 @@ function Cards() {
     {
       title: 'Aces Towing',
       desc: 'This is a contract project for a towing company in Leesburg, FL. Currently under construction. The code is not available for viewing due to company security compliance.',
-      pic: '/aces.webp',
+      pic: '/aces_sm.webp',
       git: 'https://github.com/Aces-Towing/aces',
       site: 'https://acestowing.vercel.app',
       pro: true
@@ -22,7 +22,7 @@ function Cards() {
     {    
       title: 'Rent a Tes',
       desc: 'Built in React using Tailwind CSS and Typescript. This is the frontend design of an example rental car website.',
-      pic: '/tesla.webp',
+      pic: '/tesla_sm.webp',
       git: 'https://github.com/Miguel-Matos/rent-a-tes',
       site: 'http://rentates.netlify.app',
       pro: false
