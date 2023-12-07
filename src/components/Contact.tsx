@@ -23,11 +23,12 @@ export default function Contact() {
   };
 
   useEffect(() => {
-    setTimeout(() => {
-      setSent(!sent);
-    }, 5000)
-
-  }, [sent]);
+    if (sent) {
+      setTimeout(() => {
+        setSent(false);
+      }, 5000);
+    }
+  }, [sent]); 
 
   return(
     <div className=' z-20'>
