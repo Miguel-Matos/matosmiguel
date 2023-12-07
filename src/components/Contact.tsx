@@ -23,9 +23,9 @@ export default function Contact() {
   };
 
   useEffect(() => {
-    if (sent) {
+    if (sent === false) {
       setTimeout(() => {
-        setSent(false);
+        setSent(true);
       }, 5000);
     }
   }, [sent]); 
