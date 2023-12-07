@@ -8,7 +8,7 @@ import { motion, AnimatePresence } from "framer-motion";
 export default function Contact() {
   const form:any = useRef();
 
-  const [sent, setSent] = useState(false);
+  const [sent, setSent] = useState(true);
 
   const sendEmail = (e:any) => {
     e.preventDefault();
