@@ -1,12 +1,14 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPhone, faEnvelope, faLocationDot, faEnvelopeOpenText } from '@fortawesome/free-solid-svg-icons';
-import { useRef } from 'react';
+import { useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
 import { motion, AnimatePresence } from "framer-motion";
 
 export default function Contact() {
   const form:any = useRef();
+
+  const [sent, setSent] = useState(true);
 
   const sendEmail = (e:any) => {
     e.preventDefault();
@@ -14,6 +16,7 @@ export default function Contact() {
     emailjs.sendForm(import.meta.env.VITE_VERCEL_SERVICE_ID as string, import.meta.env.VITE_VERCEL_TEMPLATE_ID as string, form.current, import.meta.env.VITE_VERCEL_KEY as string)
       .then((result) => {
           console.log(result.text);
+          setSent(!sent);
       }, (error) => {
           console.log(error.text);
       });
@@ -39,6 +42,17 @@ export default function Contact() {
           </div>
 
           <form ref={form} onSubmit={sendEmail} className="flex flex-col w-full">
+
+            <AnimatePresence mode="wait">
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 0.5 }}
+              >
+                <p hidden={sent} className=' bg-stone-700 p-5 text-center rounded-xl text-lg font-bold'>Your message was successfully sent!</p>
+              </motion.div>
+            </AnimatePresence>
+
             <label className="text-center lg:text-left font-bold py-5 text-lg" htmlFor="user_name">Full Name<span className='text-red-500'>*</span></label>
             <input className="border text-black bg-slate-100 p-5" type="text" id="user_name" name='user_name' placeholder="John Smith" required />
 
