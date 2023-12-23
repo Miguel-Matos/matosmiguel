@@ -74,17 +74,16 @@ export default function Footer() {
  
 
   return(
-    <div className=" z-20">
+    <div className=" z-20 mt-auto">
     <AnimatePresence mode="wait">
       <motion.div
-      className="mt-auto"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.5 }}
       >
         <footer className="text-center text-zinc-300">
           <hr className="lg:w-1/2 w-4/5 mx-auto mb-5"/>
-          <div className="hidden md:flex gap-5 justify-center text-lg my-10">
+          <div className="hidden lg:flex gap-5 justify-center text-lg my-10">
             {menu}
           </div>
 
